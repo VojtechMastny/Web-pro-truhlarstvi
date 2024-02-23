@@ -1,0 +1,53 @@
+
+.pow {
+  display: flex; /* Use flexbox for layout */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  margin-top: 100px;
+  margin-bottom: 50px;
+  justify-content: center; /* Center items horizontally */
+}
+
+.item {
+  width: 300px; /* Default width */
+  height: 400px; /* Fixed height */
+  margin: 10px; /* Spacing between items */
+  background-color: #fff; /* White background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Drop shadow */
+  border-radius: 3px; /* Rounded corners */
+  overflow: hidden; /* Hide content that overflows the fixed size */
+  z-index: -1; /* Set z-index to 1 */
+}
+
+
+.item img {
+  max-width: 100%; 
+  height: auto; /* Auto-adjust height to maintain aspect ratio */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  border-top-left-radius: 8px; /* Rounded corners for top-left and top-right */
+  border-top-right-radius: 8px;
+}
+
+/* Style for item text */
+.item .text {
+  padding: 20px; /* Padding inside the item */
+  overflow: auto; /* Enable scrolling if text overflows */
+}
+
+/* Style for item title */
+.item .text h3 {
+  margin-top: 0; 
+  font-size: 23px;/* Remove top margin */
+}
+
+/* Style for item price */
+.item .text p {
+  padding-top: 10px;
+  font-size: 18px;
+}
+
+/* Media query for smaller resolutions */
+@media (max-width: 768px) {
+  .item {
+    width: calc(100% - 20px); /* Full width with spacing */
+  }
+}
